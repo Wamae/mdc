@@ -22,8 +22,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="48dp"
             android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/shr_logo"
-            android:contentDescription="@string/shr_logo_content_description"  />
+            android:contentDescription="@string/shr_logo_content_description"
+            app:srcCompat="@drawable/shr_logo" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,7 +35,34 @@
             android:textSize="16sp" />
 
         <!-- Snippet from "Add text fields" section goes here. -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="@string/shr_hint_username">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="@string/shr_hint_password"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
         <!-- Snippet from "Add buttons" section goes here. -->
 
     </LinearLayout>
